@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>What Should I Do This Weekend?</title>
-     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -17,7 +17,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">App Name</a>
+      <a class="navbar-brand">App Name</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,18 +25,23 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "List View", activities_path %></li>
         <li><%= link_to "Add New", new_activity_path %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Name <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Account Settings</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
+    	</ul>
+
+          <ul class="nav navbar-nav navbar-right">
+        	<% if session[:remember_token] %>
+          		<li><%= link_to "Log Out", sessions_path, method: :delete %></li>
+        	<% else %>
+          		<li><%= link_to "Sign Up", new_user_path %></li>
+          		<li><%= link_to "Sign In", new_sessions_path %></li>  
+        	<% end %>
+      		</ul>
   </div>
 </div>
 </nav>
-
+<div class="container-fluid">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
 <%= yield %>
 
 </body>
