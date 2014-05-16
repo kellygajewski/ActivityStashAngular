@@ -9253,3 +9253,350 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-15 21:09:49 -0700
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-15 21:09:49 -0700
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2014-05-16 07:23:42 -0700
+Processing by ActivitiesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 187.6430ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 177.5680ms
+  Rendered activities/_form.html.erb (11.5ms)
+  Rendered activities/new.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 525ms (Views: 129.2ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2014-05-16 07:25:38 -0700
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY=", "activity"=>{"name"=>"King Harbor Brewing Company", "location"=>"2907 182nd St, Redondo Beach, CA 90278", "link"=>"http://www.kingharborbrewing.com", "notes"=>"Tap Room Hours:\r\nWednesday/ Thursday – 4 to 8pm\r\nFriday – 4 to 9pm\r\nSaturday – Noon to 9pm\r\nSunday – Noon to 6pm"}, "commit"=>"Submit"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6610ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8680ms
+  MOPED: 127.0.0.1:27017 INSERT       database=weekend_planner_development collection=activities documents=[{"_id"=>BSON::ObjectId('53761fe24b656c3e40030000'), "name"=>"King Harbor Brewing Company", "location"=>"2907 182nd St, Redondo Beach, CA 90278", "link"=>"http://www.kingharborbrewing.com", "notes"=>"Tap Room Hours:\r\nWednesday/ Thursday – 4 to 8pm\r\nFriday – 4 to 9pm\r\nSaturday – Noon to 9pm\r\nSunday – Noon to 6pm"}] flags=[]
+                         COMMAND      database=weekend_planner_development command={:getlasterror=>1, :w=>1} runtime: 364.2090ms
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 518ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+Processing by ActivitiesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5350ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 61.7320ms
+  Rendered activities/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 193ms (Views: 191.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:39 -0700
+
+
+Started GET "/activities/53761fe24b656c3e40030000" for 127.0.0.1 at 2014-05-16 07:25:45 -0700
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"53761fe24b656c3e40030000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4090ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5050ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('53761fe24b656c3e40030000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3540ms
+  Rendered activities/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 30.1ms)
+
+
+Started GET "/activities/53761fe24b656c3e40030000/edit" for 127.0.0.1 at 2014-05-16 07:25:46 -0700
+Processing by ActivitiesController#edit as HTML
+  Parameters: {"id"=>"53761fe24b656c3e40030000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4570ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('53761fe24b656c3e40030000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4240ms
+  Rendered activities/_form.html.erb (5.5ms)
+  Rendered activities/edit.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 60ms (Views: 56.5ms)
+
+
+Started PATCH "/activities/53761fe24b656c3e40030000" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+Processing by ActivitiesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY=", "activity"=>{"name"=>"King Harbor Brewing Company", "location"=>"2907 182nd St, Redondo Beach, CA", "link"=>"http://www.kingharborbrewing.com", "notes"=>"Tap Room Hours:\r\nWednesday/ Thursday – 4 to 8pm\r\nFriday – 4 to 9pm\r\nSaturday – Noon to 9pm\r\nSunday – Noon to 6pm"}, "commit"=>"Submit", "id"=>"53761fe24b656c3e40030000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.7070ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('53761fe24b656c3e40030000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5710ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('53761fe24b656c3e40030000')} update={"$set"=>{"location"=>"2907 182nd St, Redondo Beach, CA"}} flags=[]
+                         COMMAND      database=weekend_planner_development command={:getlasterror=>1, :w=>1} runtime: 34.5070ms
+Redirected to http://localhost:3000/activities/53761fe24b656c3e40030000
+Completed 302 Found in 42ms
+
+
+Started GET "/activities/53761fe24b656c3e40030000" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"53761fe24b656c3e40030000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6540ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('53761fe24b656c3e40030000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4290ms
+  Rendered activities/show.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 78ms (Views: 74.9ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 07:25:51 -0700
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 07:32:08 -0700
+Processing by ActivitiesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3950ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3760ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5890ms
+  Rendered activities/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 127ms (Views: 124.1ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2014-05-16 07:34:01 -0700
+Processing by ActivitiesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5150ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8500ms
+  Rendered activities/_form.html.erb (4.2ms)
+  Rendered activities/new.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 178ms (Views: 173.5ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2014-05-16 07:35:12 -0700
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY=", "activity"=>{"name"=>"Anza Borrego", "location"=>"Borrego Springs, CA", "link"=>"http://www.parks.ca.gov/?page_id=638", "notes"=>"Visit in spring after a rainy winter to see desert wildflowers. Probably an overnight."}, "commit"=>"Submit"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5820ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3430ms
+  MOPED: 127.0.0.1:27017 INSERT       database=weekend_planner_development collection=activities documents=[{"_id"=>BSON::ObjectId('537622204b656c3e40040000'), "name"=>"Anza Borrego", "location"=>"Borrego Springs, CA", "link"=>"http://www.parks.ca.gov/?page_id=638", "notes"=>"Visit in spring after a rainy winter to see desert wildflowers. Probably an overnight."}] flags=[]
+                         COMMAND      database=weekend_planner_development command={:getlasterror=>1, :w=>1} runtime: 0.5110ms
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 95ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 07:35:12 -0700
+Processing by ActivitiesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5080ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4930ms
+  Rendered activities/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 215ms (Views: 211.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 07:35:14 -0700
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2014-05-16 07:46:50 -0700
+Processing by ActivitiesController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7040ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8230ms
+  Rendered activities/_form.html.erb (6.4ms)
+  Rendered activities/new.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 192ms (Views: 187.5ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 07:46:54 -0700
+Processing by ActivitiesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5740ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8810ms
+  Rendered activities/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 37.0ms)
+
+
+Started GET "/activities/537523a26b656c2cf5010000" for 127.0.0.1 at 2014-05-16 07:46:56 -0700
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"537523a26b656c2cf5010000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('537545164b656c3435020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5050ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('537523a26b656c2cf5010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4430ms
+  Rendered activities/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 32.0ms)
