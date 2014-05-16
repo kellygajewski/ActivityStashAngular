@@ -1,0 +1,12 @@
+<div class="basiccontainer">
+	<h1><%= @activity.name %></h1>
+
+	<h3><%= @activity.location %></h3>
+
+	<h3><a href="<%= @activity.link %>"><%= @activity.link %></a></h3>
+
+	<h3>Notes:</h3>
+	<%= @activity.notes %> <br><br>
+	<%= link_to "Edit", edit_activity_path(@activity) %>
+	<%= link_to "Delete", @activity, method: :delete, data: { confirm: 'Are you sure you want to delete this activity?' }  %>
+</div>

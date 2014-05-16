@@ -1,0 +1,27 @@
+// Place all the styles related to the activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+
+}
+
+.activitytable {
+	width: 75%;
+	max-width: 800px;
+	margin: 0 auto;
+	border: solid black 2px;
+}
+
+.cell {
+	border: solid black 2px;
+}
+
+.basiccontainer {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+h3 {
+	font-size: 1.3em;
+}

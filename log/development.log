@@ -9600,3 +9600,147 @@ Processing by ActivitiesController#show as HTML
   MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('537523a26b656c2cf5010000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4430ms
   Rendered activities/show.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 35ms (Views: 32.0ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2014-05-16 11:44:00 -0700
+
+LoadError (cannot load such file -- /Users/kellygajewski/wdi/WeekendPlannerApp/config/routes.rb):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `block in load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:214:in `load_dependency'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:223:in `load'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.4) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.4) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.4) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.4) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:407:in `_run__1091972736192442997__prepare__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.7ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2014-05-16 11:44:35 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY="}
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 64ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 11:44:35 -0700
+Processing by ActivitiesController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-16 11:44:35 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (123.9ms)
+Completed 200 OK in 787ms (Views: 785.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 11:44:37 -0700
