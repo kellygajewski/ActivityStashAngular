@@ -1,37 +1,29 @@
-<div class = "activitytable">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-3 cell">
+<div class = "table-responsive">
+	<table class="table">
+		<tr>
+			<th>
 			  	<p class="quote">Activity</p>
-			</div>
-			<div class="col-xs-3 cell">
+			</th>
+			<th>
 			  	<p class="quote">Location</p>
-			</div>
-			<div class="col-xs-3 cell">
+			</th>
+			<th>
 			  	<p class="quote">Link</p>
-			</div>
-			<div class="col-xs-3 cell">
-			  	<p class="quote">Date</p>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
+			</th>
+		</tr>
 		<% @activities.each do |a| %>
-			<div class="row">
-				<div class="col-xs-3 cell">
+		<tr>
+				<td>
 					<%= link_to a.name, a %> 
-				</div>
-				<div class="col-xs-3 cell">
+				</td>
+				<td>
 					<%=a.location%>
-				</div>
-				<div class="col-xs-3 cell">
+				</td>
+				<td>
 					<a href="<%=a.link%>"><%= a.link %></a>
-				</div>
-				<div class="col-xs-3 cell">
-					<%=a.date%>
-				</div>
-			</div>
+				</td>
+			</tr>
 		<%end%>
-	</div>
+	</table>
 </div>
 
