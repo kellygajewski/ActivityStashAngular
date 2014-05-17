@@ -5,11 +5,13 @@ class ActivitiesController < ApplicationController
 	
 	def index
 		@activities = Activity.all
-		#@last = Activity.last
-		#@last.location 
 		# @cs = Geocoder.coordinates(@activity.location)
 		# @lat = @cs[0]
 		# @lng = @cs[1]
+	end
+
+	def indexmap
+		@activities = Activity.all
 	end
 
 	def show
