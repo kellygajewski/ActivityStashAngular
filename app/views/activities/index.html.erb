@@ -1,3 +1,5 @@
+
+
 <div class = "table-responsive">
 	<table class="table">
 		<tr>
@@ -26,4 +28,32 @@
 		<%end%>
 	</table>
 </div>
+
+<div style='width: 800px;'>
+  <div id="basic_map" style='width: 800px; height: 400px;'></div>
+</div>
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	handler = Gmaps.build('Google');
+	handler.buildMap({ internal: {id: 'basic_map'}}, function(){
+	  if(navigator.geolocation)
+	    navigator.geolocation.getCurrentPosition(displayOnMap);
+	});
+
+	function displayOnMap(position){
+	  var marker = handler.addMarker({
+	    lat: <%= @lat %>,
+	    lng: <%= @lng %>
+	  });
+	  handler.map.centerOn(marker);
+	};
+
+});
+	
+</script>
 

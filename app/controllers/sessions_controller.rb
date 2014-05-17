@@ -8,16 +8,16 @@ class SessionsController < ApplicationController
   		flash[:success] = "Hello " + @user.name + "!"
   		session[:remember_token] = @user.id
   		@current_user = @user
-  		redirect_to root_path
+  		redirect_to activities_path
   	else
   		flash[:error] = "Invalid email/password combination"
   		render 'new'
-  		end
   	end
+  end
 
   def destroy
   	session.delete(:remember_token)
-  	redirect_to activities_path
+  	redirect_to root_path
   end
   
 end

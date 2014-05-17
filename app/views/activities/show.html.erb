@@ -10,3 +10,33 @@
 	<%= link_to "Edit", edit_activity_path(@activity) %>
 	<%= link_to "Delete", @activity, method: :delete, data: { confirm: 'Are you sure you want to delete this activity?' }  %>
 </div>
+
+<div style='width: 800px;'>
+  <div id="basic_map" style='width: 800px; height: 400px;'></div>
+</div>
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	handler = Gmaps.build('Google');
+	handler.buildMap({ internal: {id: 'basic_map'}}, function(){
+	  if(navigator.geolocation)
+	    navigator.geolocation.getCurrentPosition(displayOnMap);
+	});
+
+	function displayOnMap(position){
+	  var marker = handler.addMarker({
+	    lat: <%= @lat %>,
+	    lng: <%= @lng %>
+	  });
+	  handler.map.centerOn(marker);
+	};
+
+});
+	
+</script>
+
+

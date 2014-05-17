@@ -10693,3 +10693,771 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 14:49:54 -0700
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 14:49:54 -0700
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-16 14:51:13 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 77ms (Views: 75.3ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2014-05-16 14:51:17 -0700
+Processing by ActivitiesController#new as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-16 14:51:17 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY=", "session"=>{"email"=>"kellyagajewski@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 37.6960ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"$query"=>{"email"=>"kellyagajewski@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 28.5570ms
+Redirected to http://localhost:3000/
+Completed 302 Found in 230ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 14:56:38 -0700
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY="}
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 2ms
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+Processing by ActivitiesController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 56ms (Views: 55.0ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:12 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 34.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:22 -0700
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-16 15:02:35 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 33.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY=", "session"=>{"email"=>"kellyagajewski@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7080ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"$query"=>{"email"=>"kellyagajewski@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5590ms
+Redirected to http://localhost:3000/
+Completed 302 Found in 86ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms)
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:41 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 38.9ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:52 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:02:53 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:32 -0700
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2014-05-16 15:03:36 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY="}
+Completed 500 Internal Server Error in 6ms
+
+NameError (undefined local variable or method `welcome_path' for #<SessionsController:0x007f886c3c6170>):
+  app/controllers/sessions_controller.rb:20:in `destroy'
+
+
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/kellygajewski/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.1ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 33.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:03:52 -0700
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 15:16:25 -0700
+Processing by ActivitiesController#index as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-16 15:16:25 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 80ms (Views: 79.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zMOU9+mu8i9ZbyhZCOeOE5HemO0krQWCEBOrsMW9GYY=", "session"=>{"email"=>"kellyagajewski@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5600ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"$query"=>{"email"=>"kellyagajewski@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5880ms
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/activities.css?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/activities.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-16 15:16:34 -0700
+
+
+Started GET "/activities" for 127.0.0.1 at 2014-05-16 15:16:36 -0700
+Processing by ActivitiesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5590ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('5374cf6c6b656c2cf5000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4940ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 41.7700ms
+  Rendered activities/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 129ms (Views: 84.4ms)
+
+
+Started GET "/activities/537523c26b656c2cf5020000" for 127.0.0.1 at 2014-05-16 15:24:19 -0700
+Processing by ActivitiesController#show as HTML
+  Parameters: {"id"=>"537523c26b656c2cf5020000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6880ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=users selector={"_id"=>BSON::ObjectId('5374cf6c6b656c2cf5000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4300ms
+  MOPED: 127.0.0.1:27017 QUERY        database=weekend_planner_development collection=activities selector={"_id"=>BSON::ObjectId('537523c26b656c2cf5020000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 8.7620ms
+  Rendered activities/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 126ms (Views: 50.8ms)

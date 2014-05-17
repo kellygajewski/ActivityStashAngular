@@ -50,3 +50,5 @@ gem 'bcrypt', '~> 3.1.7'
 
 	gem 'bootstrap_form'
 	gem 'rails_12factor'
+	gem 'gmaps4rails'
+	gem 'geocoder'
