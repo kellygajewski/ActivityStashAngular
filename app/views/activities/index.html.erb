@@ -1,5 +1,3 @@
-
-
 <div class = "table-responsive">
 	<table class="table">
 		<tr>
@@ -15,45 +13,42 @@
 		</tr>
 		<% @activities.each do |a| %>
 		<tr>
-				<td>
-					<%= link_to a.name, a %> 
-				</td>
-				<td>
-					<%=a.location%>
-				</td>
-				<td>
-					<a href="<%=a.link%>"><%= a.link %></a>
-				</td>
-			</tr>
+			<td>
+				<%= link_to a.name, a %> 
+			</td>
+			<td>
+				<%=a.location%>
+			</td>
+			<td>
+				<a href="<%=a.link%>"><%= a.link %></a>
+			</td>
+		</tr>
 		<%end%>
 	</table>
 </div>
 
 <div style='width: 800px;'>
-  <div id="basic_map" style='width: 800px; height: 400px;'></div>
+  <div id="basic_map" ></div>
 </div>
 
-
-
-
 <script type="text/javascript">
-$(document).ready(function(){
-
 	handler = Gmaps.build('Google');
-	handler.buildMap({ internal: {id: 'basic_map'}}, function(){
+	handler.buildMap({ provider: {zoom: 9, provider_key: "AIzaSyDJJPOQH24cT6ETa9IZacS7NENpUt2MKzA"}, internal: {id: 'basic_map'}}, function(){
 	  if(navigator.geolocation)
 	    navigator.geolocation.getCurrentPosition(displayOnMap);
 	});
 
 	function displayOnMap(position){
-	  var marker = handler.addMarker({
-	    lat: <%= @lat %>,
-	    lng: <%= @lng %>
-	  });
-	  handler.map.centerOn(marker);
+	  var markers = handler.addMarkers([
+	  	<% @activities.each do |a| %>
+	  	{
+	  		<% coos = Geocoder.coordinates(a.location) %>
+		    lat: <%= coos[0] %>,
+		    lng: <%= coos[1] %>,
+		    infowindow: "<%=a.name%>, <%=a.location%>"
+	  },
+	  <%end%>
+	  ]);
+	  handler.map.centerOn(markers[0]);
 	};
-
-});
-	
 </script>
-
