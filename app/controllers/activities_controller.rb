@@ -10,10 +10,6 @@ class ActivitiesController < ApplicationController
 		# @lng = @cs[1]
 	end
 
-	def indexmap
-		@activities = Activity.all
-	end
-
 	def show
 		@cs = Geocoder.coordinates(@activity.location)
 		@lat = @cs[0]
@@ -26,7 +22,6 @@ class ActivitiesController < ApplicationController
 
 	def create
 		@activity = Activity.new(params.require(:activity).permit(:name, :location, :link, :notes))
-
     	respond_to do |format|
 	      	if @activity.save 
 	       	  format.html { redirect_to activities_path }

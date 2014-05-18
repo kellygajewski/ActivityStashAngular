@@ -9,7 +9,7 @@ class Activity
   field :coordinates, type: Array
 
   include Geocoder::Model::Mongoid
-	geocoded_by :address               # can also be an IP address
+	geocoded_by :location               # can also be an IP address
 	after_validation :geocode 
 
 	embeds_one :spot
