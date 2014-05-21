@@ -8,6 +8,8 @@ class Activity
   field :longitude, type: String
   field :coordinates, type: Array
 
+  belongs_to :user
+
   include Geocoder::Model::Mongoid
 	geocoded_by :location               # can also be an IP address
 	after_validation :geocode 

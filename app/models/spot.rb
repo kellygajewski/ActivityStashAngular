@@ -5,5 +5,5 @@ class Spot
 	# geocoded_by :address               # can also be an IP address
 	# after_validation :geocode 
 
-embedded_in :activity
+embedded_in :activity #inherits everything from activity model
 end
