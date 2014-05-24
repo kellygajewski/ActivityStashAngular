@@ -1,4 +1,5 @@
 require "bcrypt"
+
 class User
   include Mongoid::Document
   field :name, type: String
@@ -7,8 +8,9 @@ class User
   field :admin, type: Boolean
 
   has_many :activities
+  has_many :categories
 
-  admin = false
+  # admin = false
 
   def password
     @password
@@ -21,7 +23,7 @@ class User
 
   def authenticate(test_password)
     if BCrypt::Password.new(self.password_digest) == test_password
-      admin = true
+      #admin = true
       self
     else
       false

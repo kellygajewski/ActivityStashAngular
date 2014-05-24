@@ -5,13 +5,10 @@
 			  	<p>Activity</p>
 			</th>
 			<th>
-			  	<p>Category</p>
+			  	<p>Categories</p>
 			</th>
 			<th>
 			  	<p>Location</p>
-			</th>
-			<th>
-			  	<p>Neighborhood</p>
 			</th>
 			<th>
 			  	<p>Link</p>
@@ -23,13 +20,12 @@
 				<%= link_to a.name, a %> 
 			</td>
 			<td>
-				<%=a.category%>
+				<% a.categories.each do |c| %>
+					<%= link_to c.name, c %>
+				<% end %>
 			</td>
 			<td>
 				<%=a.location%>
-			</td>
-			<td>
-				<%=a.neighborhood%>
 			</td>
 			<td>
 				<a href="<%=a.link%>"><%= a.link %></a>

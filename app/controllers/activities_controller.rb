@@ -18,10 +18,11 @@ class ActivitiesController < ApplicationController
 
 	def new
 		@activity = Activity.new
+		@category = Category.new
 	end
 
 	def create
-		@activity = current_user.activites.new(params.require(:activity).permit(:name, :category, :location, :neighborhood, :link, :notes))
+		@activity = current_user.activites.new(params.require(:activity).permit(:name, :location, :link, :notes, :category_ids => []))
     	respond_to do |format|
 	      	if @activity.save 
 	       	  format.html { redirect_to activities_path }
@@ -34,11 +35,12 @@ class ActivitiesController < ApplicationController
 	end
 
 	def edit
+
 	end
 
 	def update
 		respond_to do |format|
-		if @activity.update_attributes(params.require(:activity).permit(:name, :category, :location, :neighborhood, :link, :notes))
+		if @activity.update_attributes(params.require(:activity).permit(:name, :location, :link, :notes, :category_ids => []))
 			format.html { redirect_to activity_path }
 			format.json { head :no_content }
 		else

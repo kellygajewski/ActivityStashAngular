@@ -1,11 +1,13 @@
 <%= bootstrap_form_for (@activity) do |f| %>
-		<%= f.text_field :name %>
-		<%= f.text_field :category %>
-		<%= f.text_field :location %>
-		<%= f.text_field :neighborhood %>
-		<%= f.text_field :link %>
-		<%= f.text_area :notes %>
+	<%= f.text_field :name %>
+	<%= f.text_field :location %>
+	<%= f.text_field :link %>
+	<%= f.text_area :notes %>
 
-		<%= f.submit "Submit" %>
+	
+  <%= f.check_boxes_collection :categories, Category.all, :id, :name %>
 
-		<% end %>
+
+	<%= f.submit "Submit" %>
+
+	<% end %>

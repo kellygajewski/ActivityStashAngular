@@ -3,6 +3,7 @@ WeekendPlanner::Application.routes.draw do
   resource :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
   resources :spots
+  resources :categories
 
 
   # The priority is based upon order of creation: first created -> highest priority.
