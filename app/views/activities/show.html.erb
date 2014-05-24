@@ -1,7 +1,9 @@
 <div class="basiccontainer">
 	<h1 class="fancyfont"><%= @activity.name %></h1>
 
-	<h3><%= @activity.location %></h3>
+	<h3><em><%= @activity.category %></em></h3>
+
+	<h3><%= @activity.location %> (<%= @activity.neighborhood %>)</h3>
 
 	<h3><a href="<%= @activity.link %>"><%= @activity.link %></a></h3>
 

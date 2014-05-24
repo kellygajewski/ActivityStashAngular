@@ -4,7 +4,7 @@ class ActivitiesController < ApplicationController
 	before_action :get_activity, only: [:show, :edit, :update, :destroy]
 	
 	def index
-		@activities = Activity.all
+		@activities = current_user.activities
 		# @cs = Geocoder.coordinates(@activity.location)
 		# @lat = @cs[0]
 		# @lng = @cs[1]
@@ -21,7 +21,7 @@ class ActivitiesController < ApplicationController
 	end
 
 	def create
-		@activity = Activity.new(params.require(:activity).permit(:name, :location, :link, :notes))
+		@activity = current_user.activites.new(params.require(:activity).permit(:name, :category, :location, :neighborhood, :link, :notes))
     	respond_to do |format|
 	      	if @activity.save 
 	       	  format.html { redirect_to activities_path }
@@ -38,7 +38,7 @@ class ActivitiesController < ApplicationController
 
 	def update
 		respond_to do |format|
-		if @activity.update_attributes(params.require(:activity).permit(:name, :location, :link, :notes))
+		if @activity.update_attributes(params.require(:activity).permit(:name, :category, :location, :neighborhood, :link, :notes))
 			format.html { redirect_to activity_path }
 			format.json { head :no_content }
 		else

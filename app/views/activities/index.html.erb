@@ -5,7 +5,13 @@
 			  	<p>Activity</p>
 			</th>
 			<th>
+			  	<p>Category</p>
+			</th>
+			<th>
 			  	<p>Location</p>
+			</th>
+			<th>
+			  	<p>Neighborhood</p>
 			</th>
 			<th>
 			  	<p>Link</p>
@@ -17,7 +23,13 @@
 				<%= link_to a.name, a %> 
 			</td>
 			<td>
+				<%=a.category%>
+			</td>
+			<td>
 				<%=a.location%>
+			</td>
+			<td>
+				<%=a.neighborhood%>
 			</td>
 			<td>
 				<a href="<%=a.link%>"><%= a.link %></a>

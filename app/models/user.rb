@@ -4,8 +4,11 @@ class User
   field :name, type: String
   field :email, type: String
   field :password_digest, type: String
+  field :admin, type: Boolean
 
   has_many :activities
+
+  admin = false
 
   def password
     @password
@@ -18,6 +21,7 @@ class User
 
   def authenticate(test_password)
     if BCrypt::Password.new(self.password_digest) == test_password
+      admin = true
       self
     else
       false

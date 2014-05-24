@@ -12,12 +12,14 @@
 	function displayOnMap(position){
 	  var markers = handler.addMarkers([
 	  	<% @activities.each do |a| %>
-	  	{
-	  		<% coos = Geocoder.coordinates(a.location) %>
-		    lat: <%= coos[0] %>,
-		    lng: <%= coos[1] %>,
-		    infowindow: "<%=a.name%>, <%=a.location%>"
-	  },
+		  	<% if !a.location.blank? %>
+		  	{
+		  		<% coos = Geocoder.coordinates(a.location) %>
+			    lat: <%= coos[0] %>,
+			    lng: <%= coos[1] %>,
+			    infowindow: "<%=a.name%>, <%=a.location%>"
+		  },
+	  	<%end%>
 	  <%end%>
 	  ]);
 	  handler.map.centerOn(markers[0]);
