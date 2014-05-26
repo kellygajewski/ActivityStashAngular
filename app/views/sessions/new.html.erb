@@ -2,7 +2,7 @@
 	<h1 class=" fancyfont">Login</h1>
 
 <%= bootstrap_form_for :session, :url => sessions_path do |f|%>
-	<%= f.text_field :email %>
+	<%= f.email_field :email %>
 	<%= f.password_field :password %>
 	<%= f.submit "Login" %>
 <% end %>

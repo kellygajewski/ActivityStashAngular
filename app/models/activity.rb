@@ -18,29 +18,29 @@ class Activity
 
   # First the objects
   def categories
-    ActivityCategory.where(activity_id: id).map do |bi|
-      bi.category
+    ActivityCategory.where(activity_id: id).map do |a|
+      a.category
     end
   end
 
-  # Show all related ingredient IDs
+  # Show all related category IDs
   def category_ids
     categories.map(&:id)
   end
 
-  # Add and remove ingredients as necessary
+  # Add and remove categories from activities as necessary
   def category_ids=(vals)
-    my_bi = ActivityCategory.where(activity_id: self.id).map(&:category_id)
+    cat = ActivityCategory.where(activity_id: self.id).map(&:category_id)
     vals.each do |s|
       next if s.blank?
       s_id = BSON::ObjectId.from_string(s)
-      if my_bi.include?(s_id)
-        my_bi.delete(s_id)
+      if cat.include?(s_id)
+        cat.delete(s_id)
       else
         ActivityCategory.create(activity_id: self.id, category_id: s_id)
       end
     end
-    my_bi.each do |r|
+    cat.each do |r|
       ActivityCategory.find_by(activity_id: self.id, category_id: r).destroy
     end
   end

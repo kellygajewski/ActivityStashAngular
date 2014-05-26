@@ -1,7 +1,7 @@
 <%= bootstrap_form_for (@activity) do |f| %>
 	<%= f.text_field :name %>
 	<%= f.text_field :location %>
-	<%= f.text_field :link %>
+	<%= f.url_field :link %>
 	<%= f.text_area :notes %>
 
 	

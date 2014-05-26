@@ -18,7 +18,7 @@ class ActivitiesController < ApplicationController
 
 	def new
 		@activity = Activity.new
-		@category = Category.new
+		@category = Category.all
 	end
 
 	def create
@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
 	end
 
 	def edit
-
+		@categories = Category.all
 	end
 
 	def update
