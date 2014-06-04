@@ -3,14 +3,12 @@
 	</div>
 </div>
 
-
 <script type="text/javascript">
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {zoom: 9, provider_key: "AIzaSyDJJPOQH24cT6ETa9IZacS7NENpUt2MKzA"}, internal: {id: 'basic_map'}}, function(){
-	  if(navigator.geolocation)
-	    navigator.geolocation.getCurrentPosition(displayOnMap);
+	  	if(navigator.geolocation)
+	    	navigator.geolocation.getCurrentPosition(displayOnMap);
 	
-
 	function displayOnMap(position){
 		var marker = handler.addMarker({
 		    lat: position.coords.latitude,
@@ -18,19 +16,19 @@
 		    infowindow: "You are here"
 		  });
   		handler.map.centerOn(marker);
-}; 
-	  var markers = handler.addMarkers([
-	  	<% @activities.each do |a| %>
-		  	<% if !a.location.blank? %>
-		  	{
-		  		<% coos = Geocoder.coordinates(a.location) %>
-			    lat: <%= coos[0] %>,
-			    lng: <%= coos[1] %>,
-			    infowindow: "<%=a.name%>, <%=a.location%>"
-		  },
-	  	<%end%>
-	  <%end%>
-	  ]);
+	}; 
+	  	var markers = handler.addMarkers([
+	  		<% @activities.each do |a| %>
+		  		<% if !a.location.blank? %>
+		  		{
+			  		<% coos = Geocoder.coordinates(a.location) %>
+				    lat: <%= coos[0] %>,
+				    lng: <%= coos[1] %>,
+				    infowindow: "<%=a.name%>, <%=a.location%>"
+			  	},
+	  			<%end%>
+	  		<%end%>
+	  	]);
 	  //handler.map.centerOn(markers[0]);
 	});
 </script>
