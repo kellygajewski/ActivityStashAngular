@@ -22,7 +22,7 @@ class ActivitiesController < ApplicationController
 	end
 
 	def create
-		@activity = current_user.activites.new(params.require(:activity).permit(:name, :location, :link, :notes, :category_ids => []))
+		@activity = current_user.activites.new(params.require(:activity).permit(activity_params))
     	respond_to do |format|
 	      	if @activity.save 
 	       	  format.html { redirect_to activities_path }
@@ -40,7 +40,7 @@ class ActivitiesController < ApplicationController
 
 	def update
 		respond_to do |format|
-		if @activity.update_attributes(params.require(:activity).permit(:name, :location, :link, :notes, :category_ids => []))
+		if @activity.update_attributes(activity_params)
 			format.html { redirect_to activity_path }
 			format.json { head :no_content }
 		else
@@ -59,12 +59,13 @@ class ActivitiesController < ApplicationController
 	end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
 
     def get_activity
 		@activity = Activity.find(params[:id])
 	end
 
-
+	def activity_params
+		params.require(:activity).permit(:name, :location, :link, :notes, :category_ids => [])
+	end
 
 end

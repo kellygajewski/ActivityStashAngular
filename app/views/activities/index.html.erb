@@ -21,7 +21,12 @@
 			</td>
 			<td>
 				<% a.categories.each do |c| %>
+					<% if c != a.categories.last %>
+					<%= link_to c.name, c %>,
+					<% else %>
 					<%= link_to c.name, c %>
+					<% end %>
+
 				<% end %>
 			</td>
 			<td>
