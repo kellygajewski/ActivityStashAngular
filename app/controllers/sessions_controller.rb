@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   		@current_user = @user
   		redirect_to activities_path
   	else
-  		flash[:error] = "Invalid email/password combination"
+  		flash.now[:error] = "Invalid email/password combination"
   		render 'new'
   	end
   end

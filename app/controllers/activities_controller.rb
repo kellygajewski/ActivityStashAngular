@@ -22,7 +22,7 @@ class ActivitiesController < ApplicationController
 	end
 
 	def create
-		@activity = current_user.activites.new(params.require(:activity).permit(activity_params))
+		@activity = current_user.activities.new(activity_params)
     	respond_to do |format|
 	      	if @activity.save 
 	       	  format.html { redirect_to activities_path }
