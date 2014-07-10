@@ -4,7 +4,7 @@
 	<%= f.url_field :link %>
 	<%= f.text_area :notes %>
 
-	
+	<!--How can I make this say Category instead of Category ids?-->
   <%= f.check_boxes_collection :category_ids, Category.all, :id, :name %>
 
 
