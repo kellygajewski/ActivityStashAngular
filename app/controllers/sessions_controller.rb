@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
   	@user = User.where(:email => params[:session][:email]).first
   	if @user && @user.authenticate(params[:session][:password])
-  		flash[:success] = "Hello " + @user.name + "!"
+  		flash.now[:success] = "Hello " + @user.name + "!"
   		session[:remember_token] = @user.id
   		@current_user = @user
   		redirect_to activities_path
