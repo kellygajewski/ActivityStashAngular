@@ -3,7 +3,7 @@ class SpotsController < ApplicationController
 	before_action :get_activity, only: [:show, :edit, :update, :destroy]
 	
 	def index
-		@activities = Activity.all
+		@activities = current_user.activities
 	end
 
 	def show
