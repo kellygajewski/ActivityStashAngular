@@ -28,18 +28,24 @@
 }
 
 .basiccontainer {
-	margin: 0 auto 30px auto;
+	margin: 30px auto;
 	margin-bottom: 30px;
 	max-width: 600px;
+	padding: 20px;
+	background: #D0EDF7;
+	box-shadow: 0 0 0 20px rgba(0,0,0,0.3);
 }
 
 .indexcontainer {
-	margin: 0 auto;
+	margin: 30px auto;
 	max-width: 800px;
+	padding: 20px;
+	background: #D0EDF7;
+	box-shadow: 0 0 0 20px rgba(0,0,0,0.3);
 }
 
 #basic_map, #show_map {
-	width: 800px; 
+	width: 560px; 
 	height: 400px;
 	margin-top: 20px;
 	margin-bottom: 20px;

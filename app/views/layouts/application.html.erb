@@ -11,7 +11,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -51,6 +51,14 @@
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
+
+<script type="text/javascript"> //randomizes background image
+  var randombgs=["/assets/IMG_0007.jpg", "/assets/IMG_0011.jpg", "/assets/P1000547.JPG", "/assets/IMG_0041.jpg"];
+
+  document.body.style.background='url('+randombgs[Math.floor(Math.random()*randombgs.length)]+') fixed center no-repeat';
+  document.body.style.backgroundSize='cover';
+</script>
+  
 <%= yield %>
 
 </body>
