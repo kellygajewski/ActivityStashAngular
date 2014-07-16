@@ -22,6 +22,7 @@
 </div>
 
 <script type="text/javascript">
+  $(document).ready(function(){
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {zoom: 14, provider_key: "AIzaSyDJJPOQH24cT6ETa9IZacS7NENpUt2MKzA"}, internal: {id: 'show_map'}}, function(){
 	  if(navigator.geolocation)
@@ -40,7 +41,7 @@
 	  );
 	  handler.map.centerOn(marker);
 	};
-	
+	});
 </script>
 
 </div>

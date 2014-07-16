@@ -7,6 +7,7 @@
 </div>
 
 <script type="text/javascript">
+$(document).ready(function(){
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {zoom: 9, provider_key: "AIzaSyDJJPOQH24cT6ETa9IZacS7NENpUt2MKzA"}, internal: {id: 'basic_map'}}, function(){
 	  	if(navigator.geolocation)
@@ -34,4 +35,5 @@
 	  	]);
 	  //handler.map.centerOn(markers[0]);
 	});
+});
 </script>
