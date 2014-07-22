@@ -80,6 +80,17 @@
 				</td> -->
 			</tr>
 		</table>
-	</div>
+		</div>
+
+		 <h3>New Activity:</h3>
+		    <form ng-submit="saveActivity();" class="form-group">
+		      <label for="name">Activity:</label>
+		      <input ng-model="newActivity.name" name="name" class="form-control">
+		      <label for="location">Location:</label>
+		      <input ng-model="newActivity.location" name="location" class="form-control">
+		      <label for="link">Link:</label>
+		      <input ng-model="newActivity.link" name="link" class="form-control">
+		      <input type="submit" value="Add New Activity!" class="btn btn-primary">
+		    </form>
 	</div>
 </div>

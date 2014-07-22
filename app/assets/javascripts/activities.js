@@ -22,8 +22,8 @@ activityApp.controller('ActivityCtrl', ['$scope', 'Activity', function($scope, A
       $scope.activities = activities;
    });
 
-    $scope.saveActivities = function () {
-      $scope.newActivities.$save(function(activity) {
+    $scope.saveActivity = function () {
+      $scope.newActivity.$save(function(activity) {
       $scope.activities.push(activity);
       $scope.newActivity = new Activity();
       });
