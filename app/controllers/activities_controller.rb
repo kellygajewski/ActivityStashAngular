@@ -2,9 +2,33 @@ class ActivitiesController < ApplicationController
 
 	before_action :authenticate_user 
 	before_action :get_activity, only: [:show, :edit, :update, :destroy]
+
+	skip_before_filter :verify_authenticity_token
+	before_filter :cors_preflight_check
+	after_filter :cors_set_access_control_headers
+
+	# For all responses in this controller, return the CORS access control headers.
+	def cors_set_access_control_headers
+		headers['Access-Control-Allow-Origin'] = '*'
+		headers['Access-Control-Allow-Methods'] = 'PATCH, DELETE, POST, GET, OPTIONS'
+		headers['Access-Control-Max-Age'] = "1728000"
+	end
+
+	# If this is a preflight OPTIONS request, then short-circuit the
+	# request, return only the necessary headers and return an empty
+	# text/plain.
+	def cors_preflight_check
+		headers['Access-Control-Allow-Origin'] = '*'
+		headers['Access-Control-Allow-Methods'] = 'PATCH, DELETE, POST, GET, OPTIONS'
+		headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Content-Type'
+		headers['Access-Control-Max-Age'] = '1728000'
+	end
+
+	respond_to :json, :html
 	
 	def index
 		@activities = current_user.activities
+		respond_with @activities
 		# @cs = Geocoder.coordinates(@activity.location)
 		# @lat = @cs[0]
 		# @lng = @cs[1]
@@ -14,6 +38,7 @@ class ActivitiesController < ApplicationController
 		@cs = Geocoder.coordinates(@activity.location)
 		@lat = @cs[0]
 		@lng = @cs[1]
+		respond_with @activity
 	end
 
 	def new

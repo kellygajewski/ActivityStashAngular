@@ -1,4 +1,6 @@
 WeekendPlanner::Application.routes.draw do
+  match 'activities', to: 'activities#index', via: [:options]
+  match 'activities/:id', to: 'activities#show', via: [:options]
   resources :activities
   resource :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]

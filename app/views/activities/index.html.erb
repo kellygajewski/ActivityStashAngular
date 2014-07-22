@@ -1,5 +1,9 @@
-<div class="indexcontainer">
+<div x-ng-app="activity-app" class="indexcontainer">
+	<div ng-controller="ActivityCtrl">
 	<h1 class="fancyfont">Your Activities</h1>
+	<div class="form-group">
+        <input x-ng-model="searchActivity" type="text" class="form-control">
+    </div>
 	<div class = "table-responsive">
 	<table class="table table-bordered">
 		<tr>
@@ -16,28 +20,25 @@
 			  	<p>Link</p>
 			</th>
 		</tr>
-		<% @activities.each do |a| %>
-		<tr>
+		<tr x-ng-repeat="a in activities | filter:searchActivity">
 			<td>
-				<%= link_to a.name, a %> 
+				{{a.name}} 
 			</td>
 			<td>
-				<% a.categories.each do |c| %>
-					<% if c != a.categories.last %>
-						<%= link_to c.name, c %>,
-					<% else %>
-						<%= link_to c.name, c %>
-					<% end %>
-				<% end %>
+				<ul x-ng-repeat="c in a.categories">
+					<li>
+						{{c.name}}
+					</li>
+				</ul>
 			</td>
 			<td>
-				<%=a.location%>
+				{{a.location}}
 			</td>
 			<td>
-				<a href="<%=a.link%>"><%= a.link %></a>
+				{{ a.link }}
 			</td>
 		</tr>
-		<%end%>
 	</table>
+</div>
 </div>
 </div>
