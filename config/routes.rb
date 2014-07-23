@@ -1,6 +1,6 @@
 WeekendPlanner::Application.routes.draw do
-  match 'activities', to: 'activities#index', via: [:options]
-  match 'activities/:id', to: 'activities#show', via: [:options]
+  # match 'activities', to: 'activities#index', via: [:options]
+  # match 'activities/:id', to: 'activities#show', via: [:options]
   resources :activities
   resource :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
@@ -12,7 +12,8 @@ WeekendPlanner::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  #root 'welcome#index'
+  root 'activities#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

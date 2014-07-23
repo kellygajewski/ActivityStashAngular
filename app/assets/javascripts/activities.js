@@ -1,11 +1,34 @@
-var activityApp = angular.module('activity-app', ['ngResource']).config(
+var activityApp = angular.module('activity-app', ['ngResource', 'ui.router', 'templates']).config(
     ['$httpProvider', function($httpProvider) {
+    var authToken = angular.element("meta[name=\"csrf-token\"]").attr("content");
     var defaults = $httpProvider.defaults.headers;
 
+    defaults.common["X-CSRF-TOKEN"] = authToken;
     defaults.patch = defaults.patch || {};
     defaults.patch['Content-Type'] = 'application/json';
     defaults.common['Accept'] = 'application/json';
 }]);
+
+activityApp.config(function($stateProvider, $urlRouterProvider) {
+  //
+  // For any unmatched url, redirect to /home
+  $urlRouterProvider.otherwise("/home");
+  //
+  // Now set up the states
+  $stateProvider
+    .state('home', {
+      url: "/home",
+      templateUrl: "home.html"
+    })
+    .state('newActivity', {
+      url: "/newActivity",
+      templateUrl: "activity_form.html"
+    })
+    .state('search', {
+      url: "/search",
+      templateUrl: "search.html"
+    })
+  });
 
 activityApp.factory('Activity', ['$resource', function($resource) {
   return $resource('/activities/:id',

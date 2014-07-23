@@ -14,8 +14,10 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
+//= require angular-rails-templates
 //= require bootstrap
 //= require underscore
 //= require gmaps/google
+//= require_tree ./templates
 //= require_tree .
 
