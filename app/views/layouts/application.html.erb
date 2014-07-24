@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
       </button>
       <ul class="nav navbar-nav logo">
-        <li><%= link_to "Activity Stash", root_path %></li>
+        <li><a ui-sref="home">Activity Stash</a></li>
       </ul>
     </div>
 
@@ -32,9 +32,9 @@
       <ul class="nav navbar-nav">
         <li><a ui-sref="search">List View</a></li>
         <li><%= link_to "Map View", spots_path %></li>
-        <li><%= link_to "Activity Categories", categories_path %></li>
+        <!-- <li><%= link_to "Activity Categories", categories_path %></li> -->
         <li><a ui-sref="newActivity">Add New Activity</a></li>
-        <li><%= link_to "Add New Category", new_category_path %></li>
+        <!-- <li><%= link_to "Add New Category", new_category_path %></li> -->
     	</ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -54,11 +54,11 @@
   <% end %>
 </div>
  <script type="text/javascript"> //randomizes background image
-//   var randombgs=["/assets/IMG_0007a.jpg", "/assets/IMG_0011a.jpg", "/assets/P1000547a.jpg", "/assets/IMG_0041a.jpg"];
+  // var randombgs=["/assets/IMG_0007a.jpg", "/assets/IMG_0011a.jpg", "/assets/P1000547a.jpg", "/assets/IMG_0041a.jpg"];
 
-//   document.body.style.background='url('+randombgs[Math.floor(Math.random()*randombgs.length)]+') fixed center no-repeat';
-//   document.body.style.backgroundSize='cover';
-// </script>
+  // document.body.style.background='url('+randombgs[Math.floor(Math.random()*randombgs.length)]+') fixed center no-repeat';
+  // document.body.style.backgroundSize='cover';
+</script>
 
 
   <%= yield %>

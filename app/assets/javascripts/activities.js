@@ -28,6 +28,10 @@ activityApp.config(function($stateProvider, $urlRouterProvider) {
       url: "/search",
       templateUrl: "search.html"
     })
+    .state('map', {
+      url: "/map",
+      templateUrl: "map.html"
+    })
   });
 
 activityApp.factory('Activity', ['$resource', function($resource) {
